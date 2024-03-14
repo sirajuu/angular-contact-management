@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/*google font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&family=Ubuntu:ital,wght@1,500&display=swap');
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}

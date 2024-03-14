@@ -1,0 +1,83 @@
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="column">
+            <h2>Contact management Application &nbsp;
+                <a routerLink="add-contact" class="btn btn-success"><i class="fa-solid fa-user-plus"></i>Add new</a>
+            </h2>
+            <p class="mt-4" style="text-align: justify;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aspernatur pariatur nobis ut magnam
+                autem, rem reprehenderit laudantium, neque ducimus id assumenda consectetur aut possimus. Dicta debitis
+                et eum. Debitis?
+                Possimus nulla doloribus ab error corporis distinctio provident, magnam, tempore asperiores alias, magni
+                dolor. Illum, atque autem. Saepe, eos eveniet obcaecati inventore aperiam necessitatibus aliquid
+                corporis, beatae odit quis id!
+            </p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <form action="">
+                        <input name="searchKey" [(ngModel)]="searchKey" placeholder="search contact here" type="text" class="form-control mt-2">
+                    </form>
+                </div>
+                <!-- <div class="col-lg-6">
+                    <input value="search" type="button" class="btn btn-primary mt-2">
+                </div> -->
+            </div>
+            <!---->
+            <!-- <pre>
+                {{allcontacts |json}}
+            </pre> -->
+
+            <!--card design-->
+            <div class="mt-2">
+                <div class="row">
+                    <div class="col-lg-6 mt-3" *ngFor="let contact of allcontacts | filter : searchKey : 'name' ">
+                     <!--card-->
+                         <div class="card">
+                            <div class="card-body">
+
+                                <div class="row align-item-center">
+                                   <div class="col-md-3 ">
+                                     <!--1st party - contact image-->
+                                      <img height="130px"
+                                      [src]="contact.photo"
+                                      [alt]="contact.name"
+                                       />
+                                   </div>
+                                   <div class="col-md-7 mt-2 ">
+                                      <!--2nd part-display contact information -->
+                                       <ul class="list-group">
+                                              <li class="list-group-item">Name:<b>{{contact.name}}</b></li>
+                                             <li class="list-group-item">Mobile: <b>{{contact.mobile}}</b></li>
+                                             <li class="list-group-item">Email:<b>{{contact.email}}</b></li>
+                                        </ul>
+                                     
+                                    </div>
+                                       <div class="col-md-1 mt-2">
+
+
+                                        <a routerLink="view-contact/{{contact.id}}" class="btn btn-success">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </a>
+                                        <a routerLink="edit-contact/{{contact.id}}" class="btn btn-danger mt-1">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </a>
+                                        <button (click)="deleteContact(contact.id)" class="btn btn-danger mt-1">
+                                             <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                       
+                                       </div>
+                                       
+                                </div>
+                            </div>
+                         </div>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,33 @@
+                contact-management app
+
+                1.create angular project : ng new contact-app
+                2.run the project: ng serve
+                3.Delete all contacts from app.component.html file and add router-outlet selection
+                4.Configure style (bootstrap), icon and fonts (google fonts)
+                5. Create all components need to design the app
+                 -all-contact
+                 -add-contact
+                 -edit-contact
+                 -view-contact
+                 -navbar
+                6.set up path for each component to display in web page
+                7.Design all HTML page
+                8.To hold data for the website, we created the db.file and host it using MYJSON server
+                API: https://my-json-server.typicode.com/ajmalameen/contact-server
+                9. Create angular service for making api calls
+                  -ApiService
+                10. Create A model for contact and group : in src/models/MyContact.ts , src/models/MyGrooup.ts
+                11. To call HTTP Methods
+                    - Import HTTPClientModule inside module file
+                    - use  HttpClient class  to get HTTP Methods
+                    -Dependency Inject HttpClient To ApiService class
+                 12.Asychronous function -Rxjs
+                   -Observable
+                     -subscribe(call back function)- resolved
+                  13.Directives - To manipulate DOM
+                     -Component Directives
+                     -Structural Directive : Add / Remove an html elements
+                       -  *ngFor : *ngFor="let variable-name of Array-name"
+                  14.ActivatedRoute - Provides        
+
+                
